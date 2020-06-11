@@ -22,14 +22,18 @@ $ python top6_app.py
 ## File Manifest
 folder **data** containing:
 * **construction_top_6_europe_2020.csv** - csv file with cleaned data of companies
+
 folder **top6_app** containing:
 * folder **static** containing img files for social media buttons
 * folder **template** containing **index.html** with content of webpage
 * **__init__.py** - python file to execute webapp when loading the module
 * **routes.py** - python file to connect back-end with front-end content
+
 folder **wrangling_scripts** containing:
 * **wrangle_data.py** - python file for wrangling and compiling data into graphs of the webapp
+
 **LICENSE.md** - markdown file with license.md for this software package
+
 **README.md** - markdown file with instructions how to install and use this python package
 
 ## Copyright and Licencing
