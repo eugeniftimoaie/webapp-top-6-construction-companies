@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Top 6 Construction Companies</title>
+
+<!--import script files needed from plotly and bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+<!--navbar links-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+   <a class="navbar-brand" href="#">Top 6 Construction Companies in Europe</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+  data-target="#navbarTogglerDemo02"
+  aria-controls="navbarTogglerDemo02" aria-expanded="false"
+  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.vinci.com" target="blank">Vinci</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.grupoacs.com" target="blank">ACS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.bouygues.com/en/" target="blank">Bouygues</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.eiffage.com" target="blank">Eiffage</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.skanska.com" target="blank">Skanska</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.strabag.com" target="blank">Strabag</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!--middle section-->
+<div class="row">
+
+    <!--social media buttons column-->
+    <div class="col-1 border-right">
+        <div id="follow-me" class="mt-3">
+            <a href="https://github.com/eugeniftimoaie" target="blank">
+                <img src="/static/img/githublogo.png" alt="github" class="img-fluid mb-4 ml-2">
+            </a>
+            <a href="https://at.linkedin.com/in/eugen-iftimoaie-71ab1a182" target="blank">
+                <img src="/static/img/linkedinlogo.png" alt="linkedin" class="img-fluid mb-4 ml-2">
+            </a>
+        </div>
+    </div>
+
+    <!--visualizations column-->
+    <div class="col-11">
+
+        <!--chart descriptions-->
+        <div id="middle-info" class="mt-3">
+
+            <!--header chart descriptions-->
+            <h2 id="tag-line">Ranking Top 6</h2>
+
+            <p>Construction companies from Europe are traditionally working all over the world. This dashboard gives an overview of the 6 largest construction companies from Europe in 2020. The two charts below show the trend of the revenue (left chart) and the number of employees (right chart) in the period between the years 2007 and 2019. The top 6 companies were ranked according the revenue realized in the financial year 2019.
+
+            <p>All values are taken from the companies' Annual Reports. Besides, all monetary values are in EURO. Links to the Annual Reports are listed in the footer of this web page.
+
+        </div>
+
+        <!--charts-->
+        <div id="charts" class="container mt-3 text-center">
+
+            <!--row 1 - two chart-->
+            <div class="row mb-6">
+                <div class="col-6">
+                    <div id="{{ids[0]}}"></div>
+                </div>
+                <div class="col-6">
+                    <div id="{{ids[1]}}"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--chart descriptions-->
+        <div id="middle-info" class="mt-3">
+
+            <p><b>Ranking:</b> 1st Vinci (France) | 2nd ACS (Spain) | 3rd Bouygues (France) | 4th Eiffage (France) | 5th Skanska (Sweden) | 6th Strabag (Austria)
+
+        </div>
+
+        <!--chart descriptions-->
+        <div id="middle-info" class="mt-3">
+
+            <!--header chart descriptions-->
+            <h2 id="tag-line">Earnings and Equity</h2>
+
+            <p>Here we look at the financial situation of each company in the period between 2007 and 2019 and compare the development to the market capitalisation. The left charts show the most important figures from the income statements as Revenue, EBIT (Earnings Before Interest & Taxes) and Net Profit. The right charts show the equity situation of the companies with the values Equity and Total Assets.
+
+        </div>
+
+        <!--charts-->
+        <div id="charts" class="container mt-3 text-center">
+
+            <!--row 2 - two charts-->
+            <div id="middle-info" class="mt-3">
+              <h4 id="tag-line" class="text-muted">Vinci (France)</h4>
+            </div>
+
+
+            <div class="row mb-6">
+                <div class="col-6">
+                    <div id="{{ids[2]}}"></div>
+                </div>
+                <div class="col-6">
+                    <div id="{{ids[3]}}"></div>
+                </div>
+            </div>
+
+
+            <!--row 3 - two charts-->
+            <div id="middle-info" class="mt-3">
+              <h4 id="tag-line" class="text-muted">ACS (Spain)</h4>
+            </div>
+
+            <div class="row mb-6">
+                <div class="col-6">
+                    <div id="{{ids[4]}}"></div>
+                </div>
+                <div class="col-6">
+                    <div id="{{ids[5]}}"></div>
+                </div>
+            </div>
+
+            <!--row 4 - two charts-->
+            <div id="middle-info" class="mt-3">
+              <h4 id="tag-line" class="text-muted">Bouygues (France)</h4>
+            </div>
+
+            <div class="row mb-6">
+                <div class="col-6">
+                    <div id="{{ids[6]}}"></div>
+                </div>
+                <div class="col-6">
+                    <div id="{{ids[7]}}"></div>
+                </div>
+            </div>
+
+
+            <!--row 5 - two charts-->
+            <div id="middle-info" class="mt-3">
+              <h4 id="tag-line" class="text-muted">Eiffage (France)</h4>
+            </div>
+
+            <div class="row mb-6">
+                <div class="col-6">
+                    <div id="{{ids[8]}}"></div>
+                </div>
+                <div class="col-6">
+                    <div id="{{ids[9]}}"></div>
+                </div>
+            </div>
+
+            <!--row 6 - two charts-->
+            <div id="middle-info" class="mt-3">
+              <h4 id="tag-line" class="text-muted">Skanska (Sweden)</h4>
+            </div>
+
+            <div class="row mb-6">
+                <div class="col-6">
+                    <div id="{{ids[10]}}"></div>
+                </div>
+                <div class="col-6">
+                    <div id="{{ids[11]}}"></div>
+                </div>
+            </div>
+
+            <!--row 7 - two charts-->
+            <div id="middle-info" class="mt-3">
+              <h4 id="tag-line" class="text-muted">Strabag (Austria)</h4>
+            </div>
+
+            <div class="row mb-6">
+                <div class="col-6">
+                    <div id="{{ids[12]}}"></div>
+                </div>
+                <div class="col-6">
+                    <div id="{{ids[13]}}"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!--chart descriptions-->
+        <div id="middle-info" class="mt-3">
+
+            <!--header chart descriptions-->
+            <h2 id="tag-line">Analysis of Income and Equity</h2>
+
+            <p>This section briefly analysis the income and equity situation from the shareholders point of view.
+
+            <p>The Net Profit Margin (Net Profit / Revenue) gives information on how well the expenses of the enterprice are controlled long-term and how much profit remains to the shareholders.
+            Net Profit Margins in construction industry are relatively low as the classic construction business is very cost intensive and competition in most areas is high. In 2019 the Top 6 companies exept Vinci had Net Profit Margins between 2 and 4 % which are quite common for large construction companies.
+            <!--Construction companies with higher Profit Margins in the long-term have either divisions which gain considerable profits from different business models or have simply an extraordinary competitiveness (e.g. market leadership) in their peer group.-->
+            Most successful companies as for example Microsoft score Profit Margins of 20 % an more in long-term. For the year 2019 Microsoft had an extraordinary Net Profit Margin of 31 %.
+
+            <p>The Equity Ratio (Equity / Total Assests) gives information on the total assets which are financed by the shareholders. A good equity ratio might be 30 % and higher. In construction business lower Equity Ratios are common. In 2019 the Top 6 companies had Equity Ratios between 12 and 31 %.
+            <!--There might be many reasons affecting the targeting of the Equity Ratio of one company and it is hardly possible to generalize why Equity Ratios in this peer group are relatively low.-->
+            Reasons for these modest Ratios might be low Profit Margins, high cost intensivity of construction enterprises, high competition or laws of taxation.
+
+            <p>In this comparison I intended to show the growth respectively the trend for a period of at least 10 years. Due to the financial crisis 2008/2009, where we could observe strong drops in market capitalisation, I choosed to start the period from 2007 as this was the last year before the finanical crisis 2008/2009. Accordingly the period ends in 2019 which is the year before the Covid-19 pandemy crisis where we could observe a strong drop of market capitalisation, too.
+
+            <p>The first two charts show the trend of the Net Profit Ratio and the trend of the Equity Ratio of the top 6 companies.
+
+        </div>
+
+        <!--charts-->
+        <div id="charts" class="container mt-3 text-center">
+
+            <!--row 8 - two charts-->
+            <div class="row mb-6">
+                <div class="col-6">
+                    <div id="{{ids[14]}}"></div>
+                </div>
+                <div class="col-6">
+                    <div id="{{ids[15]}}"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--chart descriptions-->
+        <div id="middle-info" class="mt-3">
+
+            <p>The last four charts show the growth in Revenue, Net Profit, Equity and Market Capitalisation of the top 6 companies. Base year with 100 % is 2007 for all companies.
+
+        </div>
+
+        <!--charts-->
+        <div id="charts" class="container mt-3 text-center">
+
+            <!--row 9 - two charts-->
+            <div class="row mb-6">
+                <div class="col-6">
+                    <div id="{{ids[16]}}"></div>
+                </div>
+                <div class="col-6">
+                    <div id="{{ids[17]}}"></div>
+                </div>
+            </div>
+
+            <!--row 10 - two charts-->
+            <div class="row mb-6">
+                <div class="col-6">
+                    <div id="{{ids[18]}}"></div>
+                </div>
+                <div class="col-6">
+                    <div id="{{ids[19]}}"></div>
+                </div>
+            </div>
+
+        </div>
+        <!--chart descriptions-->
+        <div id="middle-info" class="mt-3">
+
+            <!--header chart descriptions-->
+            <h2 id="tag-line">Evaluation</h2>
+
+            <p>At last here is an evaluation of each of the top 6 construction companies with comparison of the values from 2019 and the trend / growth in the period between 2007 and 2019:
+
+            <!--list with summary and tables-->
+            <ol class="list-styled">
+              <!--Vinci - summary and table-->
+              <li><b>Vinci</b> (France)
+                <p>Vinci is a worldwide operating French concessions and construction company with headquarter in Rueil-Malmaison near Paris. In our given period it has always been the largest construction company in Europe.
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col" class="text-center">Revenue</th>
+                      <th scope="col" class="text-center">Net Profit</th>
+                      <th scope="col" class="text-center">Profit Margin</th>
+                      <th scope="col" class="text-center">Equity</th>
+                      <th scope="col" class="text-center">Equity Ratio</th>
+                      <th scope="col" class="text-center">Market Capital.</th>
+                      <th scope="col" class="text-center">Price / Earnings</th>
+                      <th scope="col" class="text-center">Price / Book</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">2019</th>
+                      <td class="text-center">48.1 B €</td>
+                      <td class="text-center">3.26 B €</td>
+                      <td class="text-center">6.78 %</td>
+                      <td class="text-center">20.4 B €</td>
+                      <td class="text-center">22.4 %</td>
+                      <td class="text-center">59.9 B €</td>
+                      <td class="text-center">18.4</td>
+                      <td class="text-center">2.93</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Rank Top 6</th>
+                      <td class="text-center">1</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">4</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">6</td>
+                      <td class="text-center">6</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Min 12 yrs</th>
+                      <td class="text-center">30.9 B €</td>
+                      <td class="text-center">1.46 B €</td>
+                      <td class="text-center">4.69 %</td>
+                      <td class="text-center">7.54 B €</td>
+                      <td class="text-center">15.1 %</td>
+                      <td class="text-center">14.7 B €</td>
+                      <td class="text-center">9.3</td>
+                      <td class="text-center">1.48</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Max 12 yrs</th>
+                      <td class="text-center">48.1 B €</td>
+                      <td class="text-center">3.26 B €</td>
+                      <td class="text-center">6.85 %</td>
+                      <td class="text-center">20.4 B €</td>
+                      <td class="text-center">25.5 %</td>
+                      <td class="text-center">59.9 B €</td>
+                      <td class="text-center">18.4</td>
+                      <td class="text-center">3.23</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Growth 12 yrs</th>
+                      <td class="text-center">+ 56 %</td>
+                      <td class="text-center">+ 124 %</td>
+                      <td class="text-center">+ 44 %</td>
+                      <td class="text-center">+ 171 %</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">+ 146 %</td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>By comparison with the top 6 companies the Vinci shares were by far the best investment with a growth of 146 % in the given period. The growth can be explained by a 124 % growth of Net Profit and a 171 % growth of Equity. Furthermore Vinci succeded to increase its Net Profit Margin by 44 %.
+              </li>
+
+              <!--ACS - summary and table-->
+              <li><b>ACS</b> (Spain)
+                <p>ACS is a worldwide operating Spanish construction company with headquarter in Madrid. It is the second largest construction company in Europe since 2012, after ACS took over the German construction company Hochtief.
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col" class="text-center">Revenue</th>
+                      <th scope="col" class="text-center">Net Profit</th>
+                      <th scope="col" class="text-center">Profit Margin</th>
+                      <th scope="col" class="text-center">Equity</th>
+                      <th scope="col" class="text-center">Equity Ratio</th>
+                      <th scope="col" class="text-center">Market Capital.</th>
+                      <th scope="col" class="text-center">Price / Earnings</th>
+                      <th scope="col" class="text-center">Price / Book</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">2019</th>
+                      <td class="text-center">39.0 B €</td>
+                      <td class="text-center">0.96 B €</td>
+                      <td class="text-center">2.46 %</td>
+                      <td class="text-center">4.78 B €</td>
+                      <td class="text-center">12.4 %</td>
+                      <td class="text-center">11.2 B €</td>
+                      <td class="text-center">11.7</td>
+                      <td class="text-center">2.35</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Rank Top 6</th>
+                      <td class="text-center">2</td>
+                      <td class="text-center">3</td>
+                      <td class="text-center">5</td>
+                      <td class="text-center">4</td>
+                      <td class="text-center">6</td>
+                      <td class="text-center">3</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">4</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Min 12 yrs</th>
+                      <td class="text-center">14.3 B €</td>
+                      <td class="text-center">-1.93 B €</td>
+                      <td class="text-center">-5.02 %</td>
+                      <td class="text-center">3.38 B €</td>
+                      <td class="text-center">6.6 %</td>
+                      <td class="text-center">5.99 B €</td>
+                      <td class="text-center">n/a</td>
+                      <td class="text-center">1.27</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Max 12 yrs</th>
+                      <td class="text-center">39.0 B €</td>
+                      <td class="text-center">1.95 B €</td>
+                      <td class="text-center">12.6 %</td>
+                      <td class="text-center">5.68 B €</td>
+                      <td class="text-center">16.1 %</td>
+                      <td class="text-center">14.3 B €</td>
+                      <td class="text-center">12.8</td>
+                      <td class="text-center">3.22</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Growth 12 yrs</th>
+                      <td class="text-center">+ 154 %</td>
+                      <td class="text-center">+ 62 %</td>
+                      <td class="text-center">- 76 %</td>
+                      <td class="text-center">+ 3 %</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">- 22 %</td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>By comparison with the top 6 companies the ACS shares were the second worst investment with a loss of 22 % in the given period.
+              </li>
+
+              <!--Bouygues - summary and table-->
+              <li><b>Bouygues</b> (France)
+                <p>Bouygues is a worldwide operating French construction company with headquarter in Paris. Besides construction business Bouygues has divisions operating with telecommunications and media. Until 2012 it has been the second largest construction company in Europe. Today it is the third largest one after Vinci and ACS.
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col" class="text-center">Revenue</th>
+                      <th scope="col" class="text-center">Net Profit</th>
+                      <th scope="col" class="text-center">Profit Margin</th>
+                      <th scope="col" class="text-center">Equity</th>
+                      <th scope="col" class="text-center">Equity Ratio</th>
+                      <th scope="col" class="text-center">Market Capital.</th>
+                      <th scope="col" class="text-center">Price / Earnings</th>
+                      <th scope="col" class="text-center">Price / Book</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">2019</th>
+                      <td class="text-center">37.9 B €</td>
+                      <td class="text-center">1.18 B €</td>
+                      <td class="text-center">3.12 %</td>
+                      <td class="text-center">10.4 B €</td>
+                      <td class="text-center">26.4 %</td>
+                      <td class="text-center">14.4 B €</td>
+                      <td class="text-center">12.1</td>
+                      <td class="text-center">1.38</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Rank Top 6</th>
+                      <td class="text-center">3</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">4</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">3</td>
+                      <td class="text-center">2</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Min 12 yrs</th>
+                      <td class="text-center">29.6 B €</td>
+                      <td class="text-center">-0.76 B €</td>
+                      <td class="text-center">-2.27 %</td>
+                      <td class="text-center">6.99 B €</td>
+                      <td class="text-center">20.9 %</td>
+                      <td class="text-center">7.26 B €</td>
+                      <td class="text-center">n/a</td>
+                      <td class="text-center">0.85</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Max 12 yrs</th>
+                      <td class="text-center">37.9 B €</td>
+                      <td class="text-center">1.50 B €</td>
+                      <td class="text-center">4.64 %</td>
+                      <td class="text-center">10.4 B €</td>
+                      <td class="text-center">26.4 %</td>
+                      <td class="text-center">16.8 B €</td>
+                      <td class="text-center">31.3</td>
+                      <td class="text-center">2.40</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Growth 12 yrs</th>
+                      <td class="text-center">+ 28 %</td>
+                      <td class="text-center">- 14 %</td>
+                      <td class="text-center">- 33 %</td>
+                      <td class="text-center">+ 49 %</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">- 14 %</td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>By comparison with the top 6 companies the Bouygues shares were the third worst investment with a loss of 14 % in the given period.
+              </li>
+
+              <!--Eiffage - summary and table-->
+              <li><b>Eiffage</b> (France)
+                <p>Eiffage is a worldwide operating French concessions and construction company with headquarter in Vélizy-Villacoublay near Paris. In 2019 it has been the fourth largest construction company in Europe.
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col" class="text-center">Revenue</th>
+                      <th scope="col" class="text-center">Net Profit</th>
+                      <th scope="col" class="text-center">Profit Margin</th>
+                      <th scope="col" class="text-center">Equity</th>
+                      <th scope="col" class="text-center">Equity Ratio</th>
+                      <th scope="col" class="text-center">Market Capital.</th>
+                      <th scope="col" class="text-center">Price / Earnings</th>
+                      <th scope="col" class="text-center">Price / Book</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">2019</th>
+                      <td class="text-center">18.7 B €</td>
+                      <td class="text-center">0.73 B €</td>
+                      <td class="text-center">3.88 %</td>
+                      <td class="text-center">5.25 B €</td>
+                      <td class="text-center">16.0 %</td>
+                      <td class="text-center">10.0 B €</td>
+                      <td class="text-center">13.8</td>
+                      <td class="text-center">1.91</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Rank Top 6</th>
+                      <td class="text-center">4</td>
+                      <td class="text-center">4</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">3</td>
+                      <td class="text-center">5</td>
+                      <td class="text-center">4</td>
+                      <td class="text-center">4</td>
+                      <td class="text-center">3</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Min 12 yrs</th>
+                      <td class="text-center">12.6 B €</td>
+                      <td class="text-center">0.91 B €</td>
+                      <td class="text-center">1.39 %</td>
+                      <td class="text-center">2.32 B €</td>
+                      <td class="text-center">8.6 %</td>
+                      <td class="text-center">1.64 B €</td>
+                      <td class="text-center">6.3</td>
+                      <td class="text-center">0.70</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Max 12 yrs</th>
+                      <td class="text-center">18.7 B €</td>
+                      <td class="text-center">1.94 B €</td>
+                      <td class="text-center">7.95 %</td>
+                      <td class="text-center">5.25 B €</td>
+                      <td class="text-center">16.0 %</td>
+                      <td class="text-center">10.0 B €</td>
+                      <td class="text-center">18.6</td>
+                      <td class="text-center">2.18</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Growth 12 yrs</th>
+                      <td class="text-center">+ 49 %</td>
+                      <td class="text-center">- 27 %</td>
+                      <td class="text-center">- 51 %</td>
+                      <td class="text-center">+ 82 %</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">+ 59 %</td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>By comparison with the top 6 companies the Eiffage shares were the second best investment with a growth of 59 % in the given period. Furthermore it has to be mentioned that the Net Profit of 2007 was an exception and therefore the growth of Net Profit and Net Profit Margin are negativ. From 2011 Eiffage got a constant growth in Net Profit and Profit Margin.
+              </li>
+
+              <!--Skanska - summary and table-->
+              <li><b>Skanska</b> (Sweden)
+                <p>Skanska is a Swedish construction company with headquarter in Stockholm. It has been the fifth largest construction company in Europe since 2018.
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col" class="text-center">Revenue</th>
+                      <th scope="col" class="text-center">Net Profit</th>
+                      <th scope="col" class="text-center">Profit Margin</th>
+                      <th scope="col" class="text-center">Equity</th>
+                      <th scope="col" class="text-center">Equity Ratio</th>
+                      <th scope="col" class="text-center">Market Capital.</th>
+                      <th scope="col" class="text-center">Price / Earnings</th>
+                      <th scope="col" class="text-center">Price / Book</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">2019</th>
+                      <td class="text-center">16.8 B €</td>
+                      <td class="text-center">0.57 B €</td>
+                      <td class="text-center">3.49 %</td>
+                      <td class="text-center">3.14 B €</td>
+                      <td class="text-center">26.1 %</td>
+                      <td class="text-center">8.30 B €</td>
+                      <td class="text-center">14.4</td>
+                      <td class="text-center">2.65</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Rank Top 6</th>
+                      <td class="text-center">5</td>
+                      <td class="text-center">5</td>
+                      <td class="text-center">3</td>
+                      <td class="text-center">6</td>
+                      <td class="text-center">3</td>
+                      <td class="text-center">5</td>
+                      <td class="text-center">5</td>
+                      <td class="text-center">5</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Min 12 yrs</th>
+                      <td class="text-center">13.2 B €</td>
+                      <td class="text-center">0.28 B €</td>
+                      <td class="text-center">2.16 %</td>
+                      <td class="text-center">1.75 B €</td>
+                      <td class="text-center">21.7 %</td>
+                      <td class="text-center">2.95 B €</td>
+                      <td class="text-center">6.2</td>
+                      <td class="text-center">1.69</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Max 12 yrs</th>
+                      <td class="text-center">16.8 B €</td>
+                      <td class="text-center">0.85 B €</td>
+                      <td class="text-center">6.39 %</td>
+                      <td class="text-center">3.14 B €</td>
+                      <td class="text-center">26.6 %</td>
+                      <td class="text-center">9.20 B €</td>
+                      <td class="text-center">17.9</td>
+                      <td class="text-center">3.25</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Growth 12 yrs</th>
+                      <td class="text-center">+ 12 %</td>
+                      <td class="text-center">+ 32 %</td>
+                      <td class="text-center">+ 18 %</td>
+                      <td class="text-center">+ 44 %</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">+ 53 %</td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>By comparison to the top 6 companies the Skanska shares were with a growth of 53 % the 3rd best investment in the given period.
+              </li>
+
+              <!--Strabag - summary and table-->
+              <li><b>Strabag</b> (Austria)
+                <p>Strabag is an Austrian and German construction company with headquarter in Vienna. Its core markets are Germany, Austria and the East-European countries. In 2019 it has been the sixth largest construction company in Europe.
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col" class="text-center">Revenue</th>
+                      <th scope="col" class="text-center">Net Profit</th>
+                      <th scope="col" class="text-center">Profit Margin</th>
+                      <th scope="col" class="text-center">Equity</th>
+                      <th scope="col" class="text-center">Equity Ratio</th>
+                      <th scope="col" class="text-center">Market Capital.</th>
+                      <th scope="col" class="text-center">Price / Earnings</th>
+                      <th scope="col" class="text-center">Price / Book</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">2019</th>
+                      <td class="text-center">15.7 B €</td>
+                      <td class="text-center">0.37 B €</td>
+                      <td class="text-center">2.37 %</td>
+                      <td class="text-center">3.82 B €</td>
+                      <td class="text-center">31.2 %</td>
+                      <td class="text-center">3.18 B €</td>
+                      <td class="text-center">8.6</td>
+                      <td class="text-center">0.83</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Rank Top 6</th>
+                      <td class="text-center">6</td>
+                      <td class="text-center">6</td>
+                      <td class="text-center">6</td>
+                      <td class="text-center">5</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">6</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">1</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Min 12 yrs</th>
+                      <td class="text-center">9.88 B €</td>
+                      <td class="text-center">0.06 B €</td>
+                      <td class="text-center">0.47 %</td>
+                      <td class="text-center">2.84 B €</td>
+                      <td class="text-center">27.6 %</td>
+                      <td class="text-center">1.85 B €</td>
+                      <td class="text-center">7.4</td>
+                      <td class="text-center">0.65</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Max 12 yrs</th>
+                      <td class="text-center">15.7 B €</td>
+                      <td class="text-center">0.37 B €</td>
+                      <td class="text-center">2.37 %</td>
+                      <td class="text-center">3.82 B €</td>
+                      <td class="text-center">37.1 %</td>
+                      <td class="text-center">5.55 B €</td>
+                      <td class="text-center">34.7</td>
+                      <td class="text-center">1.93</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Growth 12 yrs</th>
+                      <td class="text-center">+ 59 %</td>
+                      <td class="text-center">+ 118 %</td>
+                      <td class="text-center">+ 38 %</td>
+                      <td class="text-center">+ 33 %</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">- 43 %</td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>By comparison with the top 6 companies the Strabag shares were by far the worst investment with a loss of 43 % in the given period. It has to be mentioned that the shares were highly overrated in 2007. Taking 2008 as basic date we get a growth in market capitalisation of 72 %.
+              </li>
+            </ol>
+        </div>
+    <div>
+</div>
+
+<!--footer section-->
+<div id="footer" class="container"></div>
+
+</body>
+
+
+<footer>
+
+  <!-- Footer -->
+  <footer class="page-footer bg-light font-small indigo">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-9 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Remarks</h5>
+
+          <ul class="list-styled">
+            <li><i>Revenue</i> is Revenue of the company for the period of one Financial Year</li>
+            <li><i>EBIT</i> is Earnings before Interest and Taxes of the company for the period of one Financial Year</li>
+            <li><i>Net Profit</i> is Net Income attributable to the shareholders of the company for the period of one Financial Year</li>
+            <li><i>Equity</i> is Equity attributable to the shareholders of the company on last day of the Financial Year</li>
+            <li><i>Total Assets</i> is Balance Sheet Total of the company on last day of the Financial Year</li>
+            <li><i>Market Capital.</i> is Market Capitalisation (Share Price x Shares Outstanding) of the company on last day of the Financial Year</li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Annual Reports</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://www.vinci.com/vinci.nsf/en/finance-documentation-annual-reports/pages/p_vinci.htm"target="blank">Vinci</a>
+            </li>
+            <li>
+              <a href="https://www.grupoacs.com/shareholders-investors/annual-report/"target="blank">ACS</a>
+            </li>
+            <li>
+              <a href="https://www.bouygues.com/en/finance-2/investors-2/investors-presentations/"target="blank">Bouygues</a>
+            </li>
+            <li>
+              <a href="https://www.eiffage.com/en/media/publications"target="blank">Eiffage</a>
+            </li>
+            <li>
+              <a href="https://group.skanska.com/investors/reports-publications/annual-reports/"target="blank">Skanska</a>
+            </li>
+            <li>
+              <a href="https://www.strabag.com/databases/internet/_public/content.nsf/web/EN-STRABAG.COM-GB.html"target="blank">Strabag</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright ans social media icons-->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright: Eugen Iftimoaie
+      <a href="https://github.com/eugeniftimoaie" target="blank"><i class="fa fa-github-square fa-icon"></i></a>
+      <a href="https://at.linkedin.com/in/eugen-iftimoaie-71ab1a182" target="blank"><i class="fa fa-linkedin-square fa-icon"></i></a>
+    </div>
+
+    <!-- Copyright -->
+
+    <script type="text/javascript">
+        // plots the figure with id
+        // id much match the div id above in the html
+        var figures = {{figuresJSON | safe}};
+        var ids = {{ids | safe}};
+        for(var i in figures) {
+            Plotly.plot(ids[i],
+                figures[i].data,
+                figures[i].layout || {});
+        }
+    </script>
+
+</footer>
+
+
+</html>
