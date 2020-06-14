@@ -9,16 +9,16 @@ Furthermore this webapp has been uploaded on heroku and can be viewed entering f
 * Python 3 with libraries bootstrap + plotly (Front-end) and flask (Back-end)
 
 ## Installation on local computer
-Steps for opening webapp on browser from localhost:
-* change directory to folder with *top6_app.py*
+Steps for opening webapp on browser:
+1) change directory to folder with "top6_app.py"
 ```bash
 $ cd .../web_app
 ```
-* start web app with following command
+2) start web app with following command
 ```bash
 $ python top6_app.py
 ```
-* open browser and type in url: http://localhost:5000/
+3) open browser and type in url: http://localhost:5000/
 
 ## File Manifest
 folder **data** containing:
