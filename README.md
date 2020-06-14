@@ -1,23 +1,24 @@
 # Webapp Top 6 Construction Companies
 Webapp with Analysis of Trends and Growths of the 6 largest European Construction Companies between the years 2007 and 2019.
 
-The webapp is available on the web under following url: https://top-construction-companies.herokuapp.com/
+The webapp files are compiled for downloading on local computer, activating via terminal and viewing offline on the browser.
+Furthermore this webapp has been uploaded on heroku and can be viewed entering following url: https://top-construction-companies.herokuapp.com/
 
 ## Configuration
 * HTML, CSS, Javascript
 * Python 3 with libraries bootstrap + plotly (Front-end) and flask (Back-end)
 
 ## Installation on local computer
-This webapp can be opened on local windows computer with following terminal commands:
-* change directory to folder with top6_app.py
+Steps for opening webapp on browser from localhost:
+* change directory to folder with *top6_app.py*
 ```bash
-$ cd ...path.../web_app
+$ cd .../web_app
 ```
 * start web app with following command
 ```bash
 $ python top6_app.py
 ```
-* open browser and type in following url: http://localhost:5000/
+* open browser and type in url: http://localhost:5000/
 
 ## File Manifest
 folder **data** containing:
