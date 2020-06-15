@@ -11,9 +11,7 @@ Furthermore this webapp has been uploaded on Heroku and can be viewed by enterin
 ## Installation on local computer
 Steps for opening webapp on browser:
 1) change directory to folder with "top6_app.py"
-```bash
-$ cd .../web_app
-```
+`$ cd .../web_app`
 2) start web app with following command
 `$ python top6_app.py`
 
@@ -35,9 +33,6 @@ folder **wrangling_scripts** containing:
 **LICENSE.md** - markdown file with license.md for this software package
 
 **README.md** - markdown file with instructions how to install and use this python package
-
-## Contributing
-I encourage you to contribute to this project ...
 
 ## Copyright and Licencing
 This project is licensed under the terms of the MIT license
