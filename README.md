@@ -1,8 +1,10 @@
 # Webapp Top 6 Construction Companies
+[![Build Status](https://travis-ci.org/eugeniftimoaie/webapp-top-6-construction-companies.png?branch=master)](https://travis-ci.org/eugeniftimoaie/eugeniftimoaie/webapp-top-6-construction-companies)
+
 Webapp with Analysis of Trends and Growths of the 6 largest European Construction Companies between the years 2007 and 2019.
 
 The webapp files are compiled for cloning the repository to local computer, activating via terminal and using offline on the browser.
-Furthermore this webapp has been uploaded on Heroku and can be viewed by entering following url: https://top-construction-companies.herokuapp.com/
+Furthermore this webapp has been uploaded on Heroku and can be viewed [here](https://top-construction-companies.herokuapp.com/)
 
 ## Configuration
 * HTML, CSS, Javascript
@@ -36,6 +38,8 @@ folder **wrangling_scripts** containing:
 
 ## Copyright and Licencing
 This project is licensed under the terms of the MIT license
+
+## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
 ## Contact
 Author: Eugen Iftimoaie
