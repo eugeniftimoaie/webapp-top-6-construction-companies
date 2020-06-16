@@ -1,5 +1,4 @@
 # Webapp Top 6 Construction Companies
-[![Build Status](https://travis-ci.org/eugeniftimoaie/webapp-top-6-construction-companies.png?branch=master)](https://travis-ci.org/eugeniftimoaie/eugeniftimoaie/webapp-top-6-construction-companies)
 
 Webapp with Analysis of Trends and Growths of the 6 largest European Construction Companies between the years 2007 and 2019.
 
